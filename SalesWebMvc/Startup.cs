@@ -56,7 +56,7 @@ namespace SalesWebMvc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                seedingService.Seed();
+                seedingService.Seed();//Se não ouver registro popula o BD
             }
             else
             {
