@@ -12,7 +12,6 @@ namespace SalesWebMvc.Models
 
         public Department()
         {
-
         }
 
         public Department(int id, string name)
@@ -27,7 +26,7 @@ namespace SalesWebMvc.Models
         }
         public double TotalSales(DateTime initial, DateTime final)
         {            
-            return Sellers.Sum(x => x.TotalSales(initial, final));
+            return Sellers.Sum(seller => seller.TotalSales(initial, final));
         }
     }
 }
