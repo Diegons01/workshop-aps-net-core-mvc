@@ -1,0 +1,65 @@
+[33mcommit 9495f6445f26d6860144e1897dcb976ac10bac7a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Mon Feb 11 09:58:10 2019 -0200
+
+    SellerService and basic FindAll
+
+[33mcommit 1249d219e1dd09389920916bac95b5fe9bbefa6e[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Fri Feb 8 15:27:54 2019 -0200
+
+    SellerService
+
+[33mcommit fc75b7b192eddeb84c6d8917ee541e189b11cf06[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Fri Feb 8 15:04:46 2019 -0200
+
+    Seeding service
+
+[33mcommit 4aa712aeef72c71fdf31ab7c7482ce693f1f2ee3[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Thu Feb 7 17:35:33 2019 -0200
+
+    Other entities and second migration
+
+[33mcommit 5ac0e704ba963f5a04488575176a716f6c49f147[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Thu Feb 7 16:30:51 2019 -0200
+
+    Changing theme
+
+[33mcommit 80f89007fa481ba576a786c6ab10f0d8f4ec29e2[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Thu Feb 7 16:18:29 2019 -0200
+
+    MySQL adaptation and first migration
+
+[33mcommit 19d930404687252b7561b07ba4ef3ab9dc4af750[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Thu Feb 7 14:46:31 2019 -0200
+
+    CRUD Scaffolding
+
+[33mcommit afc70617bdaaa6f27b2350b353d95eabe0d7b511[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Thu Feb 7 14:33:24 2019 -0200
+
+    First Model-Controller-View - Department
+
+[33mcommit dd4d201bdc7efc189b42cd48e501a8d377988131[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Thu Feb 7 13:52:35 2019 -0200
+
+    First controller and Razor pages tests
+
+[33mcommit 545a01cab8033fe5fd5e23ca2b2d5dc60819b019[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Wed Feb 6 15:34:52 2019 -0200
+
+    Add project files.
+
+[33mcommit 046067ae4bb261a2ef82844fe5cf45643dd8b12a[m
+Author: Diego Nascimento <diegodnascimento01@gmail.com>
+Date:   Wed Feb 6 15:34:22 2019 -0200
+
+    Add .gitignore and .gitattributes.
