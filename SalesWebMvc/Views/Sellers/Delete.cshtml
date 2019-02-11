@@ -1,0 +1,51 @@
+﻿<!--Objeto por parametro-->
+@model SalesWebMvc.Models.Seller;
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@ViewData["Title"]</h2>
+<!--Descrição-->
+<h3>Are your sure want to delete this?  - Deseja deletar?</h3>
+
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <!-- Alinhado na horizontal-->
+        <dt>
+            <!--Carrega as informações do objeto-->
+            @Html.DisplayNameFor(model => model.Name);
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name);
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email);
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email);
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate);
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate);
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseSalary);
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BaseSalary);
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        @*Post passando o Id do objeto*@
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="index" class="btn btn-default">Back to list</a> @*retorna ao index*@
+    </form>
+</div>
+
