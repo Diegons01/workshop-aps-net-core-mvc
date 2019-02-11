@@ -14,76 +14,77 @@ namespace SalesWebMvc.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("SalesWebMvc.Models.Department", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Department");
-                });
-
-            modelBuilder.Entity("SalesWebMvc.Models.SalesRecord", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<double>("Amount");
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<int>("Status");
-
-                    b.Property<int?>("sellerId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("sellerId");
-
-                    b.ToTable("SalesRecord");
-                });
-
-            modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<double>("BaseSalary");
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("Name");
-
-                    b.Property<DateTime>("bithDate");
-
-                    b.Property<int?>("departmentId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("departmentId");
-
-                    b.ToTable("Seller");
-                });
+                b.ToTable("Department");
+            });
 
             modelBuilder.Entity("SalesWebMvc.Models.SalesRecord", b =>
-                {
-                    b.HasOne("SalesWebMvc.Models.Seller", "seller")
-                        .WithMany("Sales")
-                        .HasForeignKey("sellerId");
-                });
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
+
+                b.Property<double>("Amount");
+
+                b.Property<DateTime>("Date");
+
+                b.Property<int?>("SellerId");
+
+                b.Property<int>("Status");
+
+                b.HasKey("Id");
+
+                b.HasIndex("SellerId");
+
+                b.ToTable("SalesRecord");
+            });
 
             modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
-                {
-                    b.HasOne("SalesWebMvc.Models.Department", "department")
-                        .WithMany("Sellers")
-                        .HasForeignKey("departmentId");
-                });
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
+
+                b.Property<double>("BaseSalary");
+
+                b.Property<DateTime>("BirthDate");
+
+                b.Property<int>("DepartmentId");
+
+                b.Property<string>("Email");
+
+                b.Property<string>("Name");
+
+                b.HasKey("Id");
+
+                b.HasIndex("DepartmentId");
+
+                b.ToTable("Seller");
+            });
+
+            modelBuilder.Entity("SalesWebMvc.Models.SalesRecord", b =>
+            {
+                b.HasOne("SalesWebMvc.Models.Seller", "Seller")
+                    .WithMany("Sales")
+                    .HasForeignKey("SellerId");
+            });
+
+            modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
+            {
+                b.HasOne("SalesWebMvc.Models.Department", "Department")
+                    .WithMany("Sellers")
+                    .HasForeignKey("DepartmentId")
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
 #pragma warning restore 612, 618
         }
     }
