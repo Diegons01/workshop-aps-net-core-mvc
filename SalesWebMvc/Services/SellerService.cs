@@ -1,9 +1,7 @@
-﻿using System;
+﻿using SalesWebMvc.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using SalesWebMvc.Data;
-using SalesWebMvc.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SalesWebMvc.Services
 {
@@ -28,7 +26,11 @@ namespace SalesWebMvc.Services
         public Seller FindById(int id)
         {
             //_context.Seller.where(x => x.Id == id).FirstOrDefault();
-            return _context.Seller.FirstOrDefault(x => x.Id == id); 
+            //Sem o uso de using Microsoft.EntityFrameworkCore;
+            //return _context.Seller.FirstOrDefault(x => x.Id == id); 
+
+            //Faz um join na tabela Departamento
+            return _context.Seller.Include(x => x.Department).FirstOrDefault(x => x.Id == id);
         }
 
         public void Remove(int id)
